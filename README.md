@@ -1,24 +1,16 @@
-# README
+# 使い方
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アイデア登録
+```
+curl -X POST -H "Content-Type: application/json" -d '{"body":"test", "category_name":"category1"}' http://localhost:3000/ideas
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## アイデア取得
+- カテゴリー名指定なし
+```
+curl 'http://localhost:3000/ideas'
+```
+- カテゴリー名指定あり
+```
+curl 'http://localhost:3000/ideas?category_name=category1'
+```

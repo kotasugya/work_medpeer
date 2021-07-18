@@ -3,10 +3,10 @@
 
 ###
 @name = getIdeas
-GET {{host}}:{{port}}/ideas?category_name=category222
+GET {{host}}:{{port}}/ideas
 
 ###
-@name = getBooksWithQuery
+@name = postIdea
 POST {{host}}:{{port}}/ideas
 Content-Type: application/json
 
