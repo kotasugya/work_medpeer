@@ -11,6 +11,6 @@ POST {{host}}:{{port}}/ideas
 Content-Type: application/json
 
 {
-	"category_name": "カテゴリー212",
+	"category_name": "カテゴリー213",
 	"body": "コンテンツ①"
 }

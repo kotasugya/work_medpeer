@@ -8,9 +8,9 @@ curl -X POST -H "Content-Type: application/json" -d '{"body":"test", "category_n
 ## アイデア取得
 - カテゴリー名指定なし
 ```
-curl 'http://localhost:3000/ideas'
+curl http://localhost:3000/ideas
 ```
 - カテゴリー名指定あり
 ```
-curl 'http://localhost:3000/ideas?category_name=category1'
+curl http://localhost:3000/ideas?category_name=category1
 ```
