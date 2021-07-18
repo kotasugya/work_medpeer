@@ -1,0 +1,16 @@
+@host = http://localhost
+@port = 3000
+
+###
+@name = getIdeas
+GET {{host}}:{{port}}/ideas?category_name=category222
+
+###
+@name = getBooksWithQuery
+POST {{host}}:{{port}}/ideas
+Content-Type: application/json
+
+{
+	"category_name": "カテゴリー212",
+	"body": "コンテンツ①"
+}
