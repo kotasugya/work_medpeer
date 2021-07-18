@@ -21,20 +21,23 @@ class IdeasController < ApplicationController
     if params[:category_name]
       category_name = Category.find_by(name: params[:category_name])
       if category_name
-        ideas = Idea.where(category_id: category_name.id)
+        ideas = Idea.joins(:category).
+          select("ideas.id, categories.name, ideas.body, ideas.created_at").
+          where(category_id: category_name.id)
       end
     else
-      ideas = Idea.all
+      ideas = Idea.joins(:category).select("ideas.id, categories.name, ideas.body, ideas.created_at")
     end
     if ideas
-      render json: {ideas: ideas}
+      render json: { ideas: ideas }
     else
       render status: :not_found
     end
   end
 
   private
-    def idea_params
-      params.require(:idea).permit(:body)
-    end
+
+  def idea_params
+    params.require(:idea).permit(:body)
+  end
 end

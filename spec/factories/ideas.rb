@@ -3,4 +3,3 @@ FactoryBot.define do
     body { "テスト" }
   end
 end
-
