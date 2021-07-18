@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :idea do
-    body { "テスト" }
+    body { "MyString" }
   end
 end
 
